@@ -8,10 +8,10 @@ public class Pessoa {
 	private String nome;
 	private Date dataNascimento;
 	private double altura;
-	
+
 	public Pessoa() {
 	}
-	
+
 	public Pessoa(String nome, Date dataNascimento, double altura) {
 		this.nome = nome;
 		this.dataNascimento = dataNascimento;
@@ -46,16 +46,16 @@ public class Pessoa {
 	public String toString() {
 		return "Pessoa [nome=" + nome + ", dataNascimento=" + dataNascimento + ", altura=" + altura + "]";
 	}
-	
+
 	public int calcularIdade() {
-		
+
 		Calendar dataNascimento = Calendar.getInstance();
-		dataNascimento.setTime(getDataNascimento());	
+		dataNascimento.setTime(getDataNascimento());
 		Calendar diaAtual = Calendar.getInstance();
-		
+
 		int idade = diaAtual.get(Calendar.YEAR) - dataNascimento.get(Calendar.YEAR);
-				
-		return idade;		
+
+		return idade;
 	}
-	
+
 }
